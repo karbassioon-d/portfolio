@@ -13,7 +13,6 @@ const About = () => {
         >
           About
           </motion.h1>
-        {/* <img href="" /> */}
         <motion.p
         initial={initialVariants}
         animate={animateVariants}

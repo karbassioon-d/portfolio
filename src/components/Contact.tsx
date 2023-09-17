@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { initialVariants, animateVariants, transition1, transition2, transition3 } from './MotionVariants';
+import { initialVariants, animateVariants, transition1, transition2 } from './MotionVariants';
 
 const Contact = () => {
   return (
@@ -13,15 +13,15 @@ const Contact = () => {
         Contact
         </motion.h1>
       <motion.div 
-      className="flex flex-col md:w-6/12 bg-gray-700 rounded"
+      className="flex flex-col md:w-6/12 h-80 bg-gray-700 rounded m-4"
       initial={initialVariants}
       animate={animateVariants}
       transition={transition2}
       >
-        <div className="md:flex md:flex-row justify-center m-4">
+        <div className="md:flex md:flex-row justify-center m-2">
           <div className="m-4 flex items-center justify-center flex-col">
             <label>Full Name</label>
-            <input className='rounded' type="textbox" placeholder='Bob Smith'></input>
+            <input className='rounded' type="textbox" placeholder='Your Name'></input>
           </div>
           <div className="m-4 flex items-center justify-center flex-col">
             <label>Email</label>
@@ -30,9 +30,9 @@ const Contact = () => {
         </div>
         <div className="flex items-center justify-center flex-col">
           <label>Message</label>
-          <textarea className='rounded' placeholder='your message here'></textarea>
+          <textarea className='rounded' placeholder='Your message here'></textarea>
+          <button className="w-20 h-10 my-6 rounded bg-green-500">Send</button>
         </div>
-        <button className="w-48 rounded bg-green-500">Send</button>
       </motion.div>
     </section>
   )

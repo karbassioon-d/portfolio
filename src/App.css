@@ -4,9 +4,3 @@ html, body {
   background-color: rgb(32,34,37);
   color: white;
 }
-
-.footer {
-  background-color: rgb(47,49,54);
-  height: 7vh;
-  bottom: 0;
-}
