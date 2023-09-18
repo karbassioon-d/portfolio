@@ -22,7 +22,7 @@ const Experience = () => {
         transition={transition2}
         >
           <h2>Goldn' Hours</h2>
-          <div className='flex flex-col md:flex-row ' >
+          <div className='max-w-96 flex flex-col md:flex-row overflow-hidden bg-cover relative' >
             <img className="rounded w-96" src={gh} alt="Goldn' Hours" />
             <p>Goldn' Hours is the first weather based social media website for the professional photographer. You can upload photos and show the lighting and weather conditions in each post. Each of your posts shows up on a live map.</p>
           </div>
@@ -33,7 +33,7 @@ const Experience = () => {
         transition={transition3}
         >
           <h2>Autonexus</h2>
-          <div className='flex flex-col md:flex-row' >
+          <div className='flex flex-col md:flex-row overflow-hidden' >
             <img className="rounded w-96" src={an} alt="Autonexus" />
             <p>Autonexus is a fully car dealership management website. You can track your automobile inventory, sales, technicians, salespeople, and more. You can also make appointments for repairs.</p>
           </div>
