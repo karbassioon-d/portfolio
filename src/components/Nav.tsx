@@ -11,7 +11,7 @@ const Nav = () => {
             whileHover={{ translateY: -3 }}
             className="m-4"
           >
-            <NavLink to='/'><img className="md:w-12" src={logo} alt="home-button" /></NavLink>
+            <NavLink to='/'><img className="w-12" src={logo} alt="home-button" /></NavLink>
         </motion.li>
         <motion.li
             whileTap={{ translateY: 1, scale: 0.9 }}
