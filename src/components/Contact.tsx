@@ -30,8 +30,12 @@ const Contact = () => {
         </div>
         <div className="flex items-center justify-center flex-col">
           <label>Message</label>
-          <textarea className='md:w-96 rounded' placeholder='Your message here'></textarea>
-          <button className="w-20 h-10 my-6 rounded bg-green-500">Send</button>
+          <textarea className='md:w-96 md:h-28 rounded' placeholder='Your message here'></textarea>
+          <motion.button 
+          whileTap={{ translateY: 1, scale: 0.9 }}
+          className="w-20 md:w-32 h-10 my-4 rounded bg-green-500">
+            Send
+          </motion.button>
         </div>
       </motion.div>
     </section>

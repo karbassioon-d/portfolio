@@ -20,34 +20,33 @@ const About = () => {
             About
             </motion.h1>
             <motion.img
-            initial={{opacity: 0, y: 200}}
-            animate={{opacity: 1, y: 0}}
+            initial={{opacity: 0, x: -200}}
+            animate={{opacity: 1, x: 0}}
             transition={{duration: 0.3, delay: 0.4, ease: [0, 0.71, 0.2, 1.01],}}
             className="w-10" src={ny} />
             <motion.img 
-            initial={{opacity: 0, x: -200}}
-            animate={{opacity: 1, x: 0}}
-            transition={{duration: 0.3, delay: 0.6, ease: [0, 0.71, 0.2, 1.01],}}
+            initial={{opacity: 0, x: -200, y: -200}}
+            animate={{opacity: 1, x: 0, y: 0}}
+            transition={{duration: 0.3, delay: 0.5, ease: [0, 0.71, 0.2, 1.01],}}
             className="w-10" src={jp} />
             <motion.img 
             initial={{opacity: 0, y: -200}}
             animate={{opacity: 1, y: 0}}
-            transition={{duration: 0.3, delay: 0.8, ease: [0, 0.71, 0.2, 1.01],}}
+            transition={{duration: 0.3, delay: 0.6, ease: [0, 0.71, 0.2, 1.01],}}
             className="w-10" src={gb} />
             <motion.img 
             initial={{opacity: 0, x: 200}}
             animate={{opacity: 1, x: 0}}
-            transition={{duration: 0.3, delay: 1, ease: [0, 0.71, 0.2, 1.01],}}
+            transition={{duration: 0.3, delay: 0.7, ease: [0, 0.71, 0.2, 1.01],}}
             className="w-10" src={weights} />
         </div>
-        <motion.p
+        <motion.h3
         initial={initialVariants}
         animate={animateVariants}
         transition={transition2}
         >
-         I'm a software engineer based in Los Angeles with experience in building full stack projects from the ground up. I graduated from New York University in 2017, and went to work in Aomori, Japan in 2019.
-         I have build web applications in both teams and individually.
-        </motion.p>
+         "I'm a Los Angeles-based software engineer with a 2017 graduation from New York University and experience in building full-stack projects from scratch. In 2019, I had the privilege of working in Aomori, Japan, further enriching my skills and global perspective. Whether working independently or in collaborative teams, I'm dedicated to crafting innovative web applications that solve real-world problems."
+        </motion.h3>
         <div>
           <motion.img 
           initial={initialVariants}
