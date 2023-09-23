@@ -15,7 +15,7 @@ const About = () => {
             initial={initialVariants}
             animate={animateVariants}
             transition={transition1}
-            className="text-cyan-400"
+            className="text-cyan-400 font-josefin"
           >
             About
             </motion.h1>
@@ -40,20 +40,20 @@ const About = () => {
             transition={{duration: 0.3, delay: 0.7, ease: [0, 0.71, 0.2, 1.01],}}
             className="w-10" src={weights} />
         </div>
-        <motion.h3
-        initial={initialVariants}
-        animate={animateVariants}
-        transition={transition2}
-        >
-         "I'm a Los Angeles-based software engineer with a 2017 graduation from New York University and experience in building full-stack projects from scratch. In 2019, I had the privilege of working in Aomori, Japan, further enriching my skills and global perspective. Whether working independently or in collaborative teams, I'm dedicated to crafting innovative web applications that solve real-world problems."
-        </motion.h3>
-        <div>
+        <div className='flex md:flex-row flex-col'>
+          <motion.h3
+          className='font-josefin'
+          initial={initialVariants}
+          animate={animateVariants}
+          transition={transition2}
+          >
+          "I'm a Los Angeles-based software engineer with a 2017 graduation from New York University and experience in building full-stack projects from scratch. In 2019, I had the privilege of working in Aomori, Japan, further enriching my skills and global perspective. Whether working independently or in collaborative teams, I'm dedicated to crafting innovative web applications that solve real-world problems."
+          </motion.h3>
           <motion.img 
           initial={initialVariants}
           animate={animateVariants}
           transition={transition3}
-          className='rounded-xl' src={aomori} alt="" />
-          {/* <img src={} alt="" /> */}
+          className='rounded-xl md:w-1/2 max-w-100% md:h-auto' src={aomori} alt="" />
         </div>
       </div>
     </section>

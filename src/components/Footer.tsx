@@ -5,7 +5,7 @@ import yt from '../assets/yt.svg';
 const Footer = () => {
   return (
     <div className='flex items-center justify-between h-10 bg-gray-700 md:fixed md:bottom-0 w-full'>
-      <p>Copyright 2023 All rights reserved</p>
+      <p className='font-josefin'>Copyright 2023 All rights reserved</p>
       <div className='flex'>
         <a target="blank" href="https://github.com/karbassioon-d">
           <img src={github} className='w-4 mr-2 hover:cursor-pointer' alt="github"/>

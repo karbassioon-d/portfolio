@@ -19,7 +19,7 @@ const Skills = () => {
   return (
     <section className='flex flex-col h-screen'>
       <motion.h1
-      className="text-cyan-400 text-center"
+      className="text-cyan-400 text-center font-josefin"
       initial={initialVariants}
       animate={animateVariants}
       transition={transition1}

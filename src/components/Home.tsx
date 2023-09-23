@@ -13,14 +13,14 @@ const Home = () => {
           initial={initialVariants}
           animate={animateVariants}
           transition={transition1}
-          className="text-cyan-400">
+          className="text-cyan-400 font-josefin">
           Dara Karbassioon
         </motion.h1>
         <motion.h3
           initial={initialVariants}
           animate={animateVariants}
           transition={transition2}
-          className=''
+          className='font-josefin'
         >
             Full Stack Developer
         </motion.h3>
