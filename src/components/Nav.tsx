@@ -6,6 +6,23 @@ import { useState } from "react";
 const Nav: React.FC = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
+  const menuVariants = {
+    open: {
+      opacity: 1,
+      height: "auto",
+      transition: {
+        stiffness: 20,
+      },
+    },
+    closed: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        stiffness: 300,
+      },
+    },
+  };
+
   return (
     <nav className="flex flex-col lg:flex-row bg-indigo-700 items-start lg:items-center justify-between w-full">
         
@@ -59,36 +76,40 @@ const Nav: React.FC = () => {
         </div>
 
         {/* Nav Links for Mobile/Tablet */}
-        <ul className={`lg:hidden flex flex-col ${!isMobileOpen && 'hidden'} px-3`}>
+        <motion.ul 
+        variants={menuVariants}
+        initial="closed"
+        animate={isMobileOpen ? "open" : "closed"}
+        className={`lg:hidden flex flex-col ${!isMobileOpen && 'hidden'} px-3 overflow-hidden`}>
             <motion.li
                 whileTap={{ translateY: 1, scale: 0.9 }}
                 whileHover={{ translateY: -3 }}
-                className="m-4"
+                className="m-4 lg:hidden"
             >
                 <NavLink to='/about'>About</NavLink>
             </motion.li>
             <motion.li
                 whileTap={{ translateY: 1, scale: 0.9 }}
                 whileHover={{ translateY: -3 }}
-                className="m-4"
+                className="m-4 lg:hidden"
             >
                 <NavLink to='/skills'>Skills</NavLink>
             </motion.li>
             <motion.li
                 whileTap={{ translateY: 1, scale: 0.9 }}
                 whileHover={{ translateY: -3 }}
-                className="m-4"
+                className="m-4 lg:hidden"
             >
                 <NavLink to='/experience'>Experience</NavLink>
             </motion.li>
             <motion.li
                 whileTap={{ translateY: 1, scale: 0.9 }}
                 whileHover={{ translateY: -3 }}
-                className="m-4"
+                className="m-4 lg:hidden"
             >
                 <NavLink to='/contact'>Contact</NavLink>
             </motion.li>
-        </ul>
+        </motion.ul>
     </nav>
   )
 }
