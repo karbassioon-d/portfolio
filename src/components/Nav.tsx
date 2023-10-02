@@ -6,6 +6,21 @@ import { useState } from "react";
 const Nav: React.FC = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
+  const topBarVariants = {
+    closed: { rotate: 0, translateY: 0 },
+    open: { rotate: 45, translateY: 11 },
+  };
+
+  const middleBarVariants = {
+    closed: { opacity: 1 },
+    open: { opacity: 0 },
+  };
+
+  const bottomBarVariants = {
+    closed: { rotate: 0, translateY: 0 },
+    open: { rotate: -45, translateY: -5 },
+  };
+
   const menuVariants = {
     open: {
       opacity: 1,
@@ -69,10 +84,26 @@ const Nav: React.FC = () => {
 
             {/* Hamburger for Mobile/Tablet */}
             <div className="lg:hidden cursor-pointer" onClick={() => setIsMobileOpen(!isMobileOpen)}>
-                <div className="w-6 h-1 bg-white mb-1"></div>
-                <div className="w-6 h-1 bg-white mb-1"></div>
-                <div className="w-6 h-1 bg-white"></div>
+                <motion.div
+                    className="w-6 h-1 bg-white mb-1"
+                    variants={topBarVariants}
+                    initial="closed"
+                    animate={isMobileOpen ? "open" : "closed"}
+                ></motion.div>
+                <motion.div
+                    className="w-6 h-1 bg-white mb-1"
+                    variants={middleBarVariants}
+                    initial="closed"
+                    animate={isMobileOpen ? "open" : "closed"}
+                ></motion.div>
+                <motion.div
+                    className="w-6 h-1 bg-white"
+                    variants={bottomBarVariants}
+                    initial="closed"
+                    animate={isMobileOpen ? "open" : "closed"}
+                ></motion.div>
             </div>
+
         </div>
 
         {/* Nav Links for Mobile/Tablet */}
