@@ -39,7 +39,7 @@ const Nav: React.FC = () => {
   };
 
   return (
-    <nav className="flex flex-col lg:flex-row bg-indigo-700 items-start lg:items-center justify-between w-full">
+    <nav className="flex flex-col lg:flex-row bg-green-600 items-start lg:items-center justify-between w-full">
         
         <div className="flex justify-between items-center w-full lg:w-auto px-4 py-2">
             <motion.li
@@ -55,7 +55,7 @@ const Nav: React.FC = () => {
                 <motion.li
                     whileTap={{ translateY: 1, scale: 0.9 }}
                     whileHover={{ translateY: -3 }}
-                    className="m-4"
+                    className="my-4"
                 >
                     <NavLink to='/about'>About</NavLink>
                 </motion.li>

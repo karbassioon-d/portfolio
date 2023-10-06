@@ -8,7 +8,7 @@ const Experience = () => {
   return (
     <section className='h-screen flex flex-col'>
       <motion.h1 
-        className="text-cyan-400 text-center font-josefin"
+        className="text-green-500 text-center font-josefin"
         initial={initialVariants}
         animate={animateVariants}
         transition={transition1}
