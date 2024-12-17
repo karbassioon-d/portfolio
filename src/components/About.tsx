@@ -37,13 +37,14 @@ const About = () => {
 
           {/* Paragraph */}
           <p className="font-josefin text-lg leading-relaxed">
-            I'm a <span className="text-green-400 font-bold">Los Angeles-based software engineer</span> with a 2017 graduation from
-            <span className="text-green-400 font-bold"> New York University</span> and experience in building full-stack projects from scratch.
-            In <span className="text-green-400 font-bold">2019</span>, I had the privilege of working in
-            <span className="text-green-400 font-bold"> Aomori, Japan</span>, further enriching my skills and global perspective.
-            Whether working independently or in collaborative teams, I'm dedicated to crafting
-            <span className="text-green-400 font-bold"> innovative web applications</span> that solve real-world problems.
+            I’m a <span className="text-green-400 font-bold">Los Angeles-based software engineer</span> with a degree from 
+            <span className="text-green-400 font-bold"> New York University</span> (2017), specializing in building full-stack projects from the ground up. 
+            In <span className="text-green-400 font-bold">2019</span>, I had the unique opportunity to work in 
+            <span className="text-green-400 font-bold"> Aomori, Japan</span>, an experience that enriched my skills and broadened my global perspective. 
+            Whether collaborating with teams or working independently, I’m passionate about creating 
+            <span className="text-green-400 font-bold"> innovative web applications</span> that address real-world challenges.
           </p>
+
 
           {/* Animated Icons */}
           <div className="flex gap-4 mt-6">
