@@ -9,38 +9,23 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 
 function App() {
-
-
   return (
-    <div>
-      <BrowserRouter >
+    <div className="flex flex-col min-h-screen">
+      <BrowserRouter>
         <Nav />
-        <Routes>
-          <Route 
-          path='/'
-          element={<Home />}
-          />
-          <Route
-          path='about'
-          element={<About />}
-          />
-          <Route
-          path='skills'
-          element={<Skills />}
-          />
-          <Route
-          path='experience'
-          element={<Experience />}
-          />
-          <Route
-          path='contact'
-          element={<Contact />}
-          />
-        </Routes>
-      <Footer />
+        <div className="flex-grow">
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='about' element={<About />} />
+            <Route path='skills' element={<Skills />} />
+            <Route path='experience' element={<Experience />} />
+            <Route path='contact' element={<Contact />} />
+          </Routes>
+        </div>
+        <Footer />
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

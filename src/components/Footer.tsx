@@ -4,21 +4,33 @@ import yt from '../assets/yt.svg';
 
 const Footer = () => {
   return (
-    <div className='flex items-center justify-between h-10 bg-gray-700 md:fixed md:bottom-0 w-full'>
-      <p className='font-josefin'>Copyright 2023 All rights reserved</p>
-      <div className='flex'>
-        <a target="blank" href="https://github.com/karbassioon-d">
-          <img src={github} className='w-4 mr-2 hover:cursor-pointer' alt="github"/>
+    <footer className="w-full bg-gray-800 text-white py-2 px-4 flex items-center justify-between">
+      <p className="font-josefin text-sm">Copyright 2025 All rights reserved</p>
+      <div className="flex space-x-3">
+        <a target="_blank" href="https://github.com/karbassioon-d" rel="noreferrer">
+          <img
+            src={github}
+            className="w-6 hover:scale-110 transition-transform"
+            alt="GitHub"
+          />
         </a>
-        <a target="blank" href="https://www.linkedin.com/in/darakarbassioon/">
-          <img src={linkedin} className='mr-2 w-4 hover:cursor-pointer'alt="linkedin"/>
+        <a target="_blank" href="https://www.linkedin.com/in/darakarbassioon/" rel="noreferrer">
+          <img
+            src={linkedin}
+            className="w-6 hover:scale-110 transition-transform"
+            alt="LinkedIn"
+          />
         </a>
-        <a target="blank" href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley'>
-          <img src={yt} className='w-4 hover:cursor-pointer mr-2' alt="youtube" />
+        <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="noreferrer">
+          <img
+            src={yt}
+            className="w-6 hover:scale-110 transition-transform"
+            alt="YouTube"
+          />
         </a>
       </div>
-    </div>
-  )
-}
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
