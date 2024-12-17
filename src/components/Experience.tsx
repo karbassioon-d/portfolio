@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import {
   initialVariants,
   animateVariants,
-  transition1,
   transition2,
   transition3,
 } from "./MotionVariants";

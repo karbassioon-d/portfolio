@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { initialVariants, animateVariants, transition1 } from "./MotionVariants";
+import { initialVariants, animateVariants } from "./MotionVariants";
 
 import bootstrap from "../assets/bootstrap.png";
 import css from "../assets/css.png";

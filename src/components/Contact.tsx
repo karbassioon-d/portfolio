@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { initialVariants, animateVariants, transition1, transition2 } from "./MotionVariants";
+import { initialVariants, animateVariants, transition2 } from "./MotionVariants";
 import { useState } from "react";
 import pug from "../assets/pug.gif";
 
