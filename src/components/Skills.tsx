@@ -69,7 +69,7 @@ const Skills = () => {
               animate={animateVariants}
               transition={{ duration: 0.8, delay: 0.2 * index }}
               whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center justify-center bg-gradient-to-r from-green-700 to-green-400 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-transform w-80"
+              className="flex flex-col items-center justify-center bg-gradient-to-r from-green-700 to-green-400 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-transform lg:w-80"
             >
               <h2 className="text-xl md:text-2xl font-bold text-black mb-3">{category.title}</h2>
               <ul className="text-center text-gray-800">

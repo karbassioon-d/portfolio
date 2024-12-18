@@ -14,8 +14,8 @@ import aomori from "../assets/aomori.jpg";
 
 const About = () => {
   return (
-    <section className="min-h-screen bg-gray-900 text-white py-12 px-6 md:px-16 pt-20">
-      <div className="flex flex-col lg:flex-row items-start justify-between gap-12 max-w-[1440px] mx-auto">
+    <section className="flex min-h-screen bg-gray-900 text-white py-12 px-6 md:px-16 pt-20">
+      <div className="flex flex-col lg:flex-row items-start justify-between gap-12 max-w-[1440px] mx-auto items-center">
         {/* Text Content */}
         <motion.div
           initial={initialVariants}

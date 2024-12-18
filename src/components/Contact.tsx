@@ -49,7 +49,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gray-900 text-white py-12 px-6 flex flex-col items-center pt-20">
+    <section className="min-h-screen bg-gray-900 text-white py-12 px-6 flex flex-col justify-center items-center pt-20">
       {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: -20, filter: "drop-shadow(0 0 0px transparent)" }}
