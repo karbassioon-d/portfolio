@@ -12,7 +12,7 @@ const Contact = () => {
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault(); 
 
     try {
       const formData = new FormData();
@@ -24,7 +24,7 @@ const Contact = () => {
       const response = await fetch("https://formspree.io/f/xgvejlla", {
         method: "POST",
         body: formData,
-        headers: { Accept: "application/json" }, // Ensure correct content negotiation
+        headers: { Accept: "application/json" }, 
       });
 
       // Check response from Formspree
