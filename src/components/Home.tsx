@@ -9,7 +9,6 @@ import {
 import github from "../assets/github.svg";
 import linkedin from "../assets/linkedin.svg";
 import JapanSVGAnimation from "./JapanSVGAnimation";
-import resumeIcon from "../assets/resumeIcon.png";
 import resume from "../assets/Dara K Full Stack Resume.pdf"
 
 const Home = () => {
