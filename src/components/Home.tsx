@@ -9,6 +9,8 @@ import {
 import github from "../assets/github.svg";
 import linkedin from "../assets/linkedin.svg";
 import JapanSVGAnimation from "./JapanSVGAnimation";
+import resumeIcon from "../assets/resumeIcon.png";
+import resume from "../assets/Dara K Full Stack Resume.pdf"
 
 const Home = () => {
   return (
@@ -66,6 +68,17 @@ const Home = () => {
           transition={{ duration: 0.1 }}
           whileTap={{ scale: 0.9 }}
           src={linkedin}
+          className="w-10 hover:cursor-pointer transition-transform"
+          alt="LinkedIn"
+        />
+        </a>
+        <a target="_blank" href={resume} download="Dara K Full Stack Resume.pdf">
+        <motion.img
+          initial={{ scale: 1, filter: "drop-shadow(0 0 0px transparent)" }}
+          whileHover={{ scale: 1.2, filter: "drop-shadow(0 0 8px #32CD32)" }}
+          transition={{ duration: 0.1 }}
+          whileTap={{ scale: 0.9 }}
+          src={resumeIcon}
           className="w-10 hover:cursor-pointer transition-transform"
           alt="LinkedIn"
         />
