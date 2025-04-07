@@ -73,16 +73,32 @@ const Home = () => {
         />
         </a>
         <a target="_blank" href={resume} download="Dara K Full Stack Resume.pdf">
-        <motion.img
-          initial={{ scale: 1, filter: "drop-shadow(0 0 0px transparent)" }}
-          whileHover={{ scale: 1.2, filter: "drop-shadow(0 0 8px #32CD32)" }}
-          transition={{ duration: 0.1 }}
-          whileTap={{ scale: 0.9 }}
-          src={resumeIcon}
-          className="w-10 hover:cursor-pointer transition-transform"
-          alt="LinkedIn"
-        />
+          <motion.button
+            initial={{ scale: 1, filter: "drop-shadow(0 0 0px transparent)" }}
+            whileHover={{ scale: 1.2, filter: "drop-shadow(0 0 8px #32CD32)" }}
+            transition={{ duration: 0.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="bg-green-500/10 border border-green-500/30 text-green-400 px-4 py-2 rounded-md 
+            hover:bg-green-500/20 flex items-center gap-2 font-josefin text-sm transition-all"
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-4 w-4" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+              />
+            </svg>
+            Download Resume
+          </motion.button>
         </a>
+
       </motion.div>
     </div>
   

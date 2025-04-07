@@ -14,6 +14,7 @@ const projects = [
     technologies: "React, FastAPI, MongoDB, Docker, Framer Motion, Tailwind CSS",
     videoSrc:
       "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7076942211086487553?compact=1",
+    link: "https://github.com/karbassioon-d/goldn-hours",
   },
   {
     title: "Autonexus",
@@ -22,6 +23,16 @@ const projects = [
     technologies: "React, Django, PostgreSQL, Docker, Bootstrap",
     videoSrc:
       "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7069877814719639552?compact=1",
+    link: "https://github.com/karbassioon-d/autonexus",
+  },
+  {
+    title: "Twitter Clone API",
+    description:
+      "Developed a comprehensive social media backend API inspired by Twitter's core functionality, built with Java Spring Boot and relational database persistence through JPA/Hibernate. This system implements a robust architecture for managing complex relationships between users, tweets, and interactive social features.",
+    technologies: "Java, Spring Boot, PostgreSQL, JPA",
+    videoSrc:
+      "",
+    link: "https://github.com/fasttrackd-student-work/spring-assessment-social-media-march-2025-team-1",
   },
 ];
 
@@ -71,6 +82,7 @@ const Experience = () => {
               <p className="text-sm text-gray-400 mb-4">
                 <strong>Technologies:</strong> {project.technologies}
               </p>
+              <a href={project.link} target="blank" >View Project on GitHub</a>
             </div>
           </motion.div>
         ))}
