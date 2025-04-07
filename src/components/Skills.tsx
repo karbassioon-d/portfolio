@@ -15,14 +15,16 @@ import reactIcon from "../assets/react.png";
 import tailwind from "../assets/tailwindIcon.png";
 import typescript from "../assets/typescript.png";
 import sql from "../assets/sql.png";
+import java from "../assets/java.png";
+import spring from "../assets/spring.png";
 
 const Skills = () => {
-  const skillIconsLeft = [html, css, bootstrap, tailwind, sql, postgresql, mongodb];
-  const skillIconsRight = [javascript, typescript, nextjs, reactIcon, python, django, nodejs];
+  const skillIconsLeft = [java, html, css, bootstrap, tailwind, sql, postgresql, mongodb];
+  const skillIconsRight = [javascript, typescript, spring, nextjs, reactIcon, python, django, nodejs];
 
   const skillCategories = [
-    { title: "Front End", skills: ["JavaScript", "React", "TypeScript", "Next.js", "HTML", "CSS", "Tailwind CSS", "Bootstrap"] },
-    { title: "Back End", skills: ["Python", "Django", "Node.js"] },
+    { title: "Front End", skills: ["JavaScript", "React", "TypeScript", "Next.js", "HTML", "CSS", "Tailwind CSS", "Bootstrap", "Angular"] },
+    { title: "Back End", skills: ["Python", "Django", "Node.js", "Java", "Spring Boot"] },
     { title: "Database", skills: ["SQL", "PostgreSQL", "MongoDB"] },
     { title: "Other", skills: ["Git", "AWS"] },
   ];
@@ -73,7 +75,7 @@ const Skills = () => {
               initial={initialVariants}
               animate={animateVariants}
               transition={{ duration: 0.8, delay: 0.2 * index }}
-              whileHover={{ scale: 1.05 }}
+              // whileHover={{ scale: 1.05 }}
               className="flex flex-col items-center justify-center bg-gradient-to-r from-green-700 to-green-400 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-transform lg:w-80"
             >
               <h2 className="text-xl md:text-2xl font-bold text-black mb-3">{category.title}</h2>
