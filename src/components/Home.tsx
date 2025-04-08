@@ -13,60 +13,75 @@ import resume from "../assets/Dara K Full Stack Resume.pdf"
 import { useState, useEffect } from "react";
 
 const Home = () => {
-  const [avatarUrl, setAvatarUrl] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+  const [githubData, setGithubData] = useState({
+    avatar_url: '',
+    bio: ''
+  });
 
   useEffect(() => {
     const username = 'karbassioon-d';
-
+    
     fetch(`https://api.github.com/users/${username}`)
       .then(response => response.json())
       .then(data => {
-        setAvatarUrl(data.avatar_url);
+        setGithubData({
+          avatar_url: data.avatar_url,
+          bio: data.bio || "Full Stack Developer passionate about creating elegant solutions."
+        });
+        setIsLoading(false);
       })
-      .catch(error => console.error('Error fetching GitHub profile: ', error));
+      .catch(error => {
+        console.error('Error fetching GitHub profile:', error);
+        setIsLoading(false);
+      });
   }, []);
 
   return (
     <section className="min-h-screen bg-gray-900 text-white flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-16 pt-20">
     {/* Text Content */}
     <div className="flex-1 max-w-lg text-left md:ml-8">
-      <div className="flex items-center justify-center">
-        {avatarUrl && (
-          <motion.img
-            src={avatarUrl}
-            alt="GitHub Profile"
-            className="rounded-full w-24 h-24 mb-4 mr-2 border-2 border-green-500"
+    <div className="flex items-center justify-center">
+          {isLoading ? (
+            <div className="animate-pulse bg-gray-700 rounded-full w-24 h-24 mb-4 mr-2"></div>
+          ) : (
+            <motion.img
+              src={githubData.avatar_url}
+              alt="GitHub Profile"
+              className="rounded-full w-24 h-24 mb-4 mr-2 border-2 border-green-500"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
             />
           )}
-        <motion.h1
+          <motion.h1
+            initial={initialVariants}
+            animate={animateVariants}
+            transition={transition1}
+            className="text-green-500 font-josefin text-5xl md:text-6xl mb-4 leading-tight"
+            style={{ textShadow: "2px 2px 6px rgba(0, 255, 0, 0.5)" }}
+          >
+            Dara Karbassioon
+          </motion.h1>
+        </div>
+        
+        <motion.h3
           initial={initialVariants}
           animate={animateVariants}
-          transition={transition1}
-          className="text-green-500 font-josefin text-5xl md:text-6xl mb-4 leading-tight"
-          style={{ textShadow: "2px 2px 6px rgba(0, 255, 0, 0.5)" }}
+          transition={transition2}
+          className="font-josefin text-2xl md:text-3xl mb-2"
         >
-          Dara Karbassioon
-        </motion.h1>
-      </div>
-      <motion.h3
-        initial={initialVariants}
-        animate={animateVariants}
-        transition={transition2}
-        className="font-josefin text-2xl md:text-3xl mb-2"
-      >
-        Full Stack Developer
-      </motion.h3>
-      <motion.h4
-        initial={initialVariants}
-        animate={animateVariants}
-        transition={transition3}
-        className="font-josefin text-lg text-gray-300 mb-6"
-      >
-        "Full stack developer with a passion for building seamless web experiences from database to UI. Specializing in Java, Spring Boot, and modern JavaScript frameworks."
-      </motion.h4>
+          Full Stack Developer
+        </motion.h3>
+        
+        <motion.h4
+          initial={initialVariants}
+          animate={animateVariants}
+          transition={transition3}
+          className="font-josefin text-lg text-gray-300 mb-6"
+        >
+          "{isLoading ? 'Loading...' : githubData.bio}"
+        </motion.h4>
   
       {/* Social Icons */}
       <motion.div
