@@ -10,12 +10,36 @@ import github from "../assets/github.svg";
 import linkedin from "../assets/linkedin.svg";
 import JapanSVGAnimation from "./JapanSVGAnimation";
 import resume from "../assets/Dara K Full Stack Resume.pdf"
+import { useState, useEffect } from "react";
 
 const Home = () => {
+  const [avatarUrl, setAvatarUrl] = useState('');
+
+  useEffect(() => {
+    const username = 'karbassioon-d';
+
+    fetch(`https://api.github.com/users/${username}`)
+      .then(response => response.json())
+      .then(data => {
+        setAvatarUrl(data.avatar_url);
+      })
+      .catch(error => console.error('Error fetching GitHub profile: ', error));
+  }, []);
+
   return (
     <section className="min-h-screen bg-gray-900 text-white flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-16 pt-20">
     {/* Text Content */}
     <div className="flex-1 max-w-lg text-left md:ml-8">
+      {avatarUrl && (
+        <motion.img
+          src={avatarUrl}
+          alt="GitHub Profile"
+          className="rounded-full w-24 h-24 mb-4 border-2 border-green-500"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          />
+        )}
       <motion.h1
         initial={initialVariants}
         animate={animateVariants}
